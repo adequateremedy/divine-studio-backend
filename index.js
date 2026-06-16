@@ -7,8 +7,8 @@ const server = http.createServer((req, res) => {
   if (parsed.pathname === "/api/auth") {
     const redirect =
       "https://accounts.google.com/o/oauth2/v2/auth" +
-      "?client_id=YOUR_CLIENT_ID" +
-      "&redirect_uri=YOUR_REDIRECT_URL" +
+      "?client_id=858234539271-abrtqgrgvlnpuavojtftp95hcqanqkql.apps.googleusercontent.com" +
+      "&redirect_uri=https://sites.google.com/view/ddse-divine-studio/screen-2-platform-selection-screen" +
       "&response_type=code" +
       "&scope=openid%20email%20profile";
 
