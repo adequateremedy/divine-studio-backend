@@ -1,6 +1,19 @@
 import { db } from "./firebase.js";
+import { collection, addDoc } from "firebase/firestore";
 import http from "http";
 import url from "url";
+
+(async () => {
+  try {
+    await addDoc(collection(db, "test"), {
+      message: "Firestore is connected",
+      time: Date.now()
+    });
+    console.log("Test write successful");
+  } catch (e) {
+    console.error("Error writing test document:", e);
+  }
+})();
 
 const server = http.createServer((req, res) => {
   const parsed = url.parse(req.url, true);
