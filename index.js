@@ -1,3 +1,4 @@
+import { db } from "./firebase.js";
 import http from "http";
 import url from "url";
 
